@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-  <script src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="heading">Users</h1>
+    <div class="input-data">
+      <form action="">
+        <div class="field">
+          <label for="first-name">First Name:</label>
+          <input id="first-name" type="text" required /> <br />
+        </div>
+        <div class="field">
+          <label for="last-name">Last Name:</label>
+          <input id="last-name" type="text" required /> <br />
+        </div>
+        <div class="field">
+          <label for="username">Username:</label>
+          <input id="username" type="text" required /> <br />
+        </div>
+        <div class="field">
+          <label for="name">Email:</label>
+          <input id="email" type="text" required /> <br />
+        </div>
+        <div class="field">
+          <label for="name">Address:</label>
+          <input id="address" type="text" required /> <br />
+        </div>
+        <div class="field">
+          <label for="Phone">phone:</label>
+          <input id="phone" type="text" required /> <br />
+        </div>
+        <div class="field">
+          <label for="website">Website:</label>
+          <input id="website" type="text" required /> <br />
+        </div>
+        <div class="field">
+          <label for="company">Company Name:</label>
+          <input id="company" type="text" required />
+        </div>
+        <input class="btn" type="button" value="Submit" />
+        <br />
+      </form>
+    </div>
+    <div class="table-data">
+      <table id="myTable">
+        <tr>
+          <th id="row-no">Sr. No.</th>
+          <th id="Name">Name</th>
+          <th id="Username">Username</th>
+          <th id="Email">Email</th>
+          <th id="Address">Address</th>
+          <th id="Phone">Phone</th>
+          <th id="Website">Website</th>
+          <th id="Company name">Company name</th>
+        </tr>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
