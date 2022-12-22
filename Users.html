@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="fetchApi()">
     <h1 class="heading">Users</h1>
     <div class="input-data">
       <form action="">
@@ -43,7 +43,13 @@
           <label for="company">Company Name:</label>
           <input id="company" type="text" required />
         </div>
-        <input class="btn" type="button" value="Submit" />
+        <input
+          class="btn"
+          type="button"
+          onclick="myFunction()"
+          value="Submit"
+        />
+
         <br />
       </form>
     </div>
