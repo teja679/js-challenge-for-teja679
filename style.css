@@ -53,10 +53,9 @@ label {
   text-align: left;
 }
 .table-data {
-  
+  padding: 1rem;
 }
 table {
-  padding: 10px;
   margin: auto;
   margin-top: 2rem;
   width: 80%;

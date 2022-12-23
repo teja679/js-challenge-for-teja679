@@ -12,11 +12,14 @@ let emailInvalid = document.getElementById("emailInvalid");
 let phoneNumberInvalid = document.getElementById("phoneNumberInvalid");
 let addressInvalid = document.getElementById("addressInvalid");
 
+
+var x = 1;
 const table = document.getElementById("myTable");
 function fetchApi() {
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
     .then((jsonData) => {
+      
       jsonData.map((json) => {
         const row = table.insertRow();
         row.classList = "table-row";
@@ -40,10 +43,13 @@ function fetchApi() {
         cell5.innerHTML = json.phone;
         cell6.innerHTML = json.website;
         cell7.innerHTML = json.company.name;
+        x++;
       });
+    })
+    .catch((err) => {
+      alert("Something went wrong while fetching the users.");
     });
 }
-let x = 11;
 function validate() {
   const firstName = document.getElementById("firstName");
   const lastName = document.getElementById("lastName");
@@ -94,7 +100,6 @@ function validate() {
   }
   var pattern = /^\+?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
   if (!phoneNumber.value.match(pattern)) {
-
     phoneNumberInvalid.style.display = "block";
     phoneNumberValid.style.display = "none";
   } else {
@@ -108,19 +113,19 @@ function validate() {
     addressInvalid.style.display = "none";
     addressValid.style.display = "block";
   }
-
+  
   if (
-    firstName.value.length >= 3 
-    && lastName.value.length >= 3 
-    && expr.test(userName.value) 
-    && userName.value !== "" 
-    && email.value.match(emailPat) 
-    && email.value !== "" 
-    && phoneNumber.value.match(pattern) 
-    && phoneNumber.value !== "" 
-    && address.value !== ""
+    firstName.value.length >= 3 &&
+    lastName.value.length >= 3 &&
+    expr.test(userName.value) &&
+    userName.value !== "" &&
+    email.value.match(emailPat) &&
+    email.value !== "" &&
+    phoneNumber.value.match(pattern) &&
+    phoneNumber.value !== "" &&
+    address.value !== ""
   ) {
-    console.log('okk')
+    console.log("okk");
     const row = table.insertRow();
     row.classList = "table-row";
     const cell0 = row.insertCell(0);
@@ -152,22 +157,22 @@ function validate() {
 
     firstNameInvalid.style.display = "none";
     firstNameValid.style.display = "none";
-    
+
     lastNameInvalid.style.display = "none";
     lastNameValid.style.display = "none";
-    
+
     userNameInvalid.style.display = "none";
     userNameValid.style.display = "none";
-    
+
     emailInvalid.style.display = "none";
     emailValid.style.display = "none";
-    
+
     phoneNumberInvalid.style.display = "none";
     phoneNumberValid.style.display = "none";
-    
+
     addressInvalid.style.display = "none";
     addressValid.style.display = "none";
-    
+
     websiteInvalid.style.display = "none";
     websiteValid.style.display = "none";
   }
